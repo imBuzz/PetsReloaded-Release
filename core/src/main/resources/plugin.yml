@@ -1,0 +1,15 @@
+name: PetsReloaded
+main: me.imbuzz.dev.petsreloaded.core.PetsReloaded
+description: Custom Pets plugin by ImBuzz
+version: ${project.version}
+api-version: 1.13
+author: ImBuzz
+softdepend:
+  - ModelEngine
+
+commands:
+  pets:
+    description: "Basic plugin command"
+    aliases:
+      - pet
+      - petsreloaded

@@ -1,0 +1,42 @@
+options:
+  auto-update: true
+  enable-riding: true
+gui:
+  menu:
+    title: "&8Pets"
+    backItem:
+      material: "ARROW"
+      name: "&7Back"
+      lore:
+        - "&7Go Back"
+    forwardItem:
+      material: "ARROW"
+      name: "&7Forward"
+      lore:
+        - "&7Go Forward"
+    closeItem:
+      material: "BARRIER"
+      name: "&cClose"
+      lore:
+        - "&7Close menu"
+messages:
+  prefix: "&c&lPetsReloaded&7:"
+  updateCheck: "%prefix% &7A new update was found %new_version%!"
+  summon:
+    spawn: "%prefix% &aSpawned your &e%pet% &apet!"
+    despawn: "%prefix% &cDespawned your &e%pet% &cpet!"
+    cannot_ride: "%prefix% &cOnly the owner can ride this pet!"
+  unlock:
+    buy_pet_at: "%prefix% &bTo unlock this pet, you need to buy it on example.example.it"
+  debug:
+    loading_pets: "%prefix% &eWe are currently loading all pets, please wait..."
+    reloading: "%prefix% &eReloading..."
+    reloaded: "%prefix% &aReload configuration completed!"
+  commands:
+    not_permission: "%prefix% &cYou don't have the permission to do that!"
+    entity_cannot_execute_this_command: "%prefix% &cYou cannot execute this command!"
+    clearWorldCompleted: "%prefix% &aCleared all pets in the world: %world%"
+    clearGlobal: "%prefix% &aCleared all pets in the server"
+    blocked: "%prefix% &cYour &e%pet% &cpet is now blocked"
+    not_blocked: "%prefix% &aYour &e%pet% &apet is now unblocked"
+    need_active_pet_to_do_that: "%prefix% &cYou need an active pet to do this action!"
