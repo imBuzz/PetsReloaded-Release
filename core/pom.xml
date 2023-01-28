@@ -30,7 +30,6 @@
             <url>https://mvn.lumine.io/repository/maven-public/</url>
         </repository>
     </repositories>
-
     <dependencies>
 
         <!-- spigot -->
@@ -68,22 +67,14 @@
             <groupId>ch.jalu</groupId>
             <artifactId>configme</artifactId>
             <version>1.3.0</version>
-            <scope>compile</scope>
         </dependency>
 
-        <!-- bStats -->
-        <dependency>
-            <groupId>org.bstats</groupId>
-            <artifactId>bstats-bukkit</artifactId>
-            <version>3.0.0</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <!-- SmartInvs MA CHE CAZZO -->
+        <!-- SmartInvs -->
         <dependency>
             <groupId>fr.minuskube.inv</groupId>
             <artifactId>smart-invs</artifactId>
             <version>1.2.7</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -111,13 +102,6 @@
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
             <version>4.0.3</version>
-        </dependency>
-
-        <!-- UpdateChecker -->
-        <dependency>
-            <groupId>com.jeff_media</groupId>
-            <artifactId>SpigotUpdateChecker</artifactId>
-            <version>2.3.0</version>
         </dependency>
 
     </dependencies>

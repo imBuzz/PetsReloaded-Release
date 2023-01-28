@@ -3,9 +3,6 @@ package me.imbuzz.dev.petsreloaded.core;
 import ch.jalu.configme.SettingsManager;
 import ch.jalu.configme.SettingsManagerBuilder;
 import com.google.common.collect.Maps;
-import com.jeff_media.updatechecker.UpdateCheckSource;
-import com.jeff_media.updatechecker.UpdateChecker;
-import com.jeff_media.updatechecker.UserAgentBuilder;
 import fr.minuskube.inv.InventoryManager;
 import lombok.Getter;
 import me.imbuzz.dev.petsreloaded.api.IPetsAPI;
@@ -20,7 +17,6 @@ import me.imbuzz.dev.petsreloaded.core.managers.PetsManager;
 import me.imbuzz.dev.petsreloaded.core.nms.INMSHandler;
 import me.imbuzz.dev.petsreloaded.core.nms.ServerProtocols;
 import me.imbuzz.dev.petsreloaded.core.utils.VariablesContainer;
-import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -38,9 +34,6 @@ public class PetsReloaded extends JavaPlugin implements IPetsAPI {
 
     private PetsCommands petsCommands;
     private VariablesContainer variablesContainer;
-
-    private Metrics metrics;
-    private UpdateChecker checker;
 
     private static PetsReloaded instance;
 
@@ -89,14 +82,6 @@ public class PetsReloaded extends JavaPlugin implements IPetsAPI {
         inventoryManager.init();
 
         petsCommands = new PetsCommands();
-        metrics = new Metrics(this, 13336);
-
-        new UpdateChecker(this, UpdateCheckSource.SPIGET, String.valueOf(SPIGOT_CODE))
-                .checkEveryXHours(12)
-                .setNotifyByPermissionOnJoin("petsreloaded.update")
-                .setUserAgent(new UserAgentBuilder().addPluginNameAndVersion())
-                .setDownloadLink("https://www.spigotmc.org/resources/petsreloaded-create-your-own-custom-pets-eula-compliant-1-8-x-1-18-x.98113/")
-                .checkNow();
     }
 
     private void checkForHooks() {

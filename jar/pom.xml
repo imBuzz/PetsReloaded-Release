@@ -208,50 +208,8 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.3.0-SNAPSHOT</version>
+                <version>3.3.0</version>
                 <configuration>
-                    <relocations>
-                        <relocation>
-                            <pattern>com.jeff_media.updatechecker</pattern>
-                            <shadedPattern>externals.updatechecker</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>com.cryptomorin.xseries</pattern>
-                            <shadedPattern>externals.xseries</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>org.bstats</pattern>
-                            <shadedPattern>externals.bstats</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>ch.jalu.configme</pattern>
-                            <shadedPattern>externals.configme</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>fr.minuskube.inv</pattern>
-                            <shadedPattern>externals.smartinvs</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>org.jetbrains.annotations</pattern>
-                            <shadedPattern>externals.jetbrains</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>org.intellij.lang.annotations</pattern>
-                            <shadedPattern>externals.intellj</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>com.zaxxer.hikari</pattern>
-                            <shadedPattern>externals.hikari</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>org.slf4j</pattern>
-                            <shadedPattern>externals.slf4j</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>org.yaml.snakeyaml</pattern>
-                            <shadedPattern>externals.yaml.snakeyaml</shadedPattern>
-                        </relocation>
-                    </relocations>
                     <filters>
                         <filter>
                             <artifact>*:*</artifact>
@@ -259,6 +217,7 @@
                                 <exclude>com/cryptomorin/xseries/XBiome*</exclude>
                                 <exclude>com/cryptomorin/xseries/NMSExtras*</exclude>
                                 <exclude>com/cryptomorin/xseries/NoteBlockMusic*</exclude>
+                                <exclude>com/cryptomorin/xseries/SkullCacheListener*</exclude>
                             </excludes>
                         </filter>
                     </filters>
