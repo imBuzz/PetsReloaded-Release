@@ -97,43 +97,34 @@ public class PetsListener implements Listener {
     public void interactAtEntity(PlayerInteractAtEntityEvent event) {
         Entity clickedEntity = event.getRightClicked();
         if (clickedEntity == null) {
-            System.out.println("WHUT_1");
             return;
         }
         if (!clickedEntity.hasMetadata("PET")) {
-            System.out.println("WHUT_2");
             return;
         }
 
         event.setCancelled(true);
 
         if (!petsReloaded.getSettings().getProperty(SettingsFile.CAN_RIDE)) {
-            System.out.println("A");
             return;
         }
         if (!petsManager.getActivePetsByEntities().containsKey(clickedEntity.getEntityId())) {
-            System.out.println("B");
             return;
         }
 
         PetEntity petEntity = petsManager.getPlayers().get(petsManager.getActivePetsByEntities().get(clickedEntity.getEntityId())).getActivePet();
 
         if (petEntity == null) {
-            System.out.println("C");
             return;
         }
         if (!petEntity.getOwner().equalsIgnoreCase(event.getPlayer().getName())) {
-            System.out.println("D");
             return;
         }
         if (!petEntity.getSettings().isMountable()) {
-            System.out.println("A");
             return;
         }
 
         petEntity.getHeadEntity().setPassenger(event.getPlayer());
-
-        System.out.println("EHEHE");
 
         if (!petsReloaded.getVariablesContainer().isEnableRidingName()) petEntity.enableName(false);
     }

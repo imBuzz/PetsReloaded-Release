@@ -37,6 +37,7 @@
         <module>v1_19_1_R0_1</module>
         <module>v1_19_2_R0_1</module>
         <module>v1_19_3_R0_1</module>
+        <module>v1_19_4_R0_1</module>
     </modules>
 
     <properties>
